@@ -2,7 +2,7 @@
 
 body {
     font-family: sans-serif;
-    background: #555555 url("img/bg.png");
+    background: #555555 url("img/bg.png") !important;
     font: 13px 'Lucida sans', Arial, Helvetica;
     color: #eee;
     position: absolute;
@@ -46,7 +46,24 @@ h1 {
     margin-bottom: 10px;
     display: inline-block;
     margin-right: 1em;
-    color: #d83c3c;
+    color: #d83c3c !important;
+    text-shadow: -1px 3px 5px #0A0000;
+}
+a {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #d83c3c !important;
+
+}
+a:hover {
+
+}
+#login-buttons a, .accounts-dialog a {
+  text-decoration: none !important;
+}
+#login-buttons .login-button, .accounts-dialog .login-button {
+  background-color:   #d83c3c !important;
+
 }
 form {
     margin-top: 10px;
@@ -67,8 +84,8 @@ form {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .4) inset, 0 1px 0 rgba(255, 255, 255, .2);
 }
 .form-wrapper input {
-    width: 330px;
-    /*height: 300px;*/
+    width: 100%;
+
     padding: 10px 5px;
     color: #333333;
     font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
@@ -76,7 +93,7 @@ form {
     background: #eee;
     -moz-border-radius: 3px 0 0 3px;
     -webkit-border-radius: 3px 0 0 3px;
-    border-radius: 3px 0 0 3px;
+    border-radius:4px;
 }
 .form-wrapper input:focus {
     outline: 0;
@@ -91,6 +108,7 @@ form {
     font-weight: normal;
     font-style: italic;
 }
+
 input:checkbox {
     overflow: visible;
     position: relative;
@@ -131,9 +149,11 @@ li {
     list-style: none;
     padding: 15px;
     border-bottom: #eee solid 1px;
+      color:#ffffff;
 }
 li .text {
     margin-left: 10px;
+
 }
 li.checked {
     color: #888;
@@ -146,7 +166,7 @@ li.private {
     border-color: #ddd;
 }
 header .hide-completed {
-    /*float: right;*/
+  color: #ffffff;
 }
 .toggle-private {
     margin-left: 5px;
