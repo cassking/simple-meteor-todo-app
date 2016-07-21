@@ -161,15 +161,22 @@ li.checked {
 li.checked .text {
     text-decoration: line-through;
 }
-li.private {
-    background: #eee;
-    border-color: #ddd;
+li.private, li button {
+
+    border: 0 rgba(0,0,0,0);
+}
+li.private button {
+    background: #d83c3c;
+    border: 0 rgba(0,0,0,0);
 }
 header .hide-completed {
   color: #ffffff;
 }
 .toggle-private {
     margin-left: 5px;
+     background: rgb(28, 184, 65);
+     border-radius: 4px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 600px) {
     li {

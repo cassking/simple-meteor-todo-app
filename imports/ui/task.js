@@ -3,8 +3,12 @@ import { Template } from 'meteor/templating';
 // import { Tasks } from '../api/tasks.js';
 import './task.html';
 
-// export const Tasks = new Mongo.Collection('tasks');
-
+Template.task.helpers({
+  //Define helper to check ownership
+  isOwner() {
+    return this.owner === Meteor.userId();
+  },
+});
 //task events
 Template.task.events({
     'click .toggle-checked' () {
@@ -33,5 +37,8 @@ Template.task.events({
     'click .delete' () {
         // Tasks.remove(this._id);
         Meteor.call('tasks.remove', this._id);
+    },
+    'click .toggle-private'() {
+      Meteor.call('tasks.setPrivate', this._id, !this.private);
     },
 });
